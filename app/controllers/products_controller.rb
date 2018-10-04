@@ -5,4 +5,8 @@ class ProductsController < ApplicationController
     render plain: product.description
   end
 
+  def index
+    @products = Product.all
+  end
+
 end
