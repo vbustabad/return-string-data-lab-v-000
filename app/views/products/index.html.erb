@@ -11,9 +11,9 @@
         $.get("/products/" + id + "/description", function(data) {
           $("#description-" + id).text(data);
         });
-        // $.get("/products/" + id + "/inventory", function(data) {
-        //   $("#description-" + id).text(data);
-        // });
+        $.get("/products/" + id + "/inventory", function(data) {
+          $("#inventory-" + id).text(data);
+        });
       });
     });
     </script>
