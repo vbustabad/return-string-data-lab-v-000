@@ -1,8 +1,13 @@
 class ProductsController < ApplicationController
 
   def description
-    product = Product.find(params[:id])
-    render plain: product.description
+    @product = Product.find(params[:id])
+    render plain: @product.description
+  end
+
+  def inventory
+    @product = Product.find(params[:id])
+    render plain: @product.inventory
   end
 
   def index
