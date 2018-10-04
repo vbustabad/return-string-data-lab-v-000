@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   def inventory
     @product = Product.find(params[:id])
 
-    if @product.inventory.size > 0
+    if @product.inventory > 0
       render body: "true", layout: false
     else
       render body: "false", layout: false
