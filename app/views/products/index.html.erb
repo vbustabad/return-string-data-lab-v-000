@@ -12,11 +12,11 @@
           $("#description-" + id).text(data);
         });
         $.get("/products/" + id + "/inventory", function(data) {
-          $("#inventory-" + id).text(data);
-          }).success(function() {
-            console.log('Available');
-          }).error(function() {
-            console.log('Sold Out');
+          if (this.inventory > 0) {
+            console.log("Available");
+          } else {
+            console.log("Sold Out");
+          }
         });
       });
     });
