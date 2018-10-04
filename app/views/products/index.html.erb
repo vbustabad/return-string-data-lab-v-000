@@ -13,10 +13,10 @@
         });
         $.get("/products/" + id + "/inventory", function(data) {
           $("#inventory-" + id).text(data);
-        }).success(function() {
-          alert('Available');
-        }).error(function() {
-          alert('Sold Out');
+          }).success(function() {
+            alert(<%= 'Available' %>);
+          }).error(function() {
+            alert(<%= 'Sold Out' %>);
         });
       });
     });
