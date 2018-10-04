@@ -15,7 +15,7 @@
           $("#inventory-" + id).text(data);
         }).success(function() {
           alert('Available');
-        });fail(function() {
+        }).error(function() {
           alert('Sold Out');
         });
       });
