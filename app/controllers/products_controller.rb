@@ -7,7 +7,12 @@ class ProductsController < ApplicationController
 
   def inventory
     @product = Product.find(params[:id])
-    render plain: @product.inventory
+
+    if @product.inventory
+      "true"
+    else
+      "false"
+    end
   end
 
   def index
