@@ -1,4 +1,7 @@
-<% @posts.each do |post| %>
-  <%= post.name %>
-  <%= truncate post.description %>
+<% @products.each do |product| %>
+  <%= product.name %>
+  <%= truncate product.description %>
+
+  <button class="js-more-info" data-id="<%= product.id %>">More Info</button>
 <% end %>
+ 
