@@ -1,1 +1,5 @@
-
+<% @posts.each do |post| %>
+  <%= post.name %>
+  <%= truncate post.description %>
+<% end %>
+ 
