@@ -14,9 +14,9 @@
         $.get("/products/" + id + "/inventory", function(data) {
           $("#inventory-" + id).text(data);
           }).success(function() {
-            alert(<%= 'Available' %>);
+            console.log('Available');
           }).error(function() {
-            alert(<%= 'Sold Out' %>);
+            console.log('Sold Out');
         });
       });
     });
