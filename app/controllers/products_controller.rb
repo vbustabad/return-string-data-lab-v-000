@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
     if @product.inventory.size > 0
       render plain: "true", layout: false
     else
-      render plain: "false", layout: true
+      render plain: "false", layout: false
     end
   end
 
