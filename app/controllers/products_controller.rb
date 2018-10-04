@@ -9,9 +9,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.inventory.size > 0
-      render plain: "true"
+      return "true", layout: false 
     else
-      render plain: "false"
+      return "false", layout: true 
     end
   end
 
