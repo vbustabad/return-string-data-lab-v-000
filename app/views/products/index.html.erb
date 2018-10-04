@@ -12,7 +12,7 @@
           $("#description-" + id).text(data);
         });
         $.get("/products/" + id + "/inventory", function(data) {
-          if (this.inventory > 0) {
+          if (data > 0) {
             console.log("Available");
           } else {
             console.log("Sold Out");
