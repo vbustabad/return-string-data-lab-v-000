@@ -13,7 +13,7 @@
           $("#description-" + id).text(data);
         });
         $.get("/products/" + id + "/inventory", function(inventory) {
-          if (inventory === true) {
+          if (inventory === "true") {
             $("#inventory-" + id).text("Available");
           } else {
             $("#inventory-" + id).text("Sold Out");
